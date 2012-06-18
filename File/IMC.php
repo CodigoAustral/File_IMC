@@ -212,11 +212,11 @@ class File_IMC
         $fileName  = 'File/IMC/Parse/'. $format . '.php';
         $className = 'File_IMC_Parse_'. $format;
 
-        if (!class_exists($className, false)) {
+        if (!class_exists($className, true)) {
             @include_once $fileName;
         }
 
-        if (!class_exists($className, false)) {
+        if (!class_exists($className, true)) {
             throw new File_IMC_Exception(
                 'No parser driver exists for format: ' . $format,
                 self::ERROR_INVALID_DRIVER);
