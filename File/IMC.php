@@ -169,11 +169,11 @@ class File_IMC
         $fileName  = 'File/IMC/Build/'. $format . '.php';
         $className = 'File_IMC_Build_'. $format;
 
-        if (!class_exists($className, false)) {
+        if (!class_exists($className, true)) {
             @include_once $fileName;
         }
 
-        if (!class_exists($className, false)) {
+        if (!class_exists($className, true)) {
             throw new File_IMC_Exception(
                 'No builder driver exists for format: ' . $format,
                 self::ERROR_INVALID_DRIVER);
