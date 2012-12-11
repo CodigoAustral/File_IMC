@@ -1,0 +1,13 @@
+{
+    "name": "schoren/file-imc",
+    "description": "File_IMC fork",
+    "authors": [
+        {
+            "name": "Sebastian Choren",
+            "email": "schoren@codigoaustral.com"
+        }
+    ],
+    "require": {
+
+    }
+}
