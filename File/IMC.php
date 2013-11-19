@@ -1,4 +1,5 @@
 <?php
+use \File_IMC_Exception;
 /**
  * +----------------------------------------------------------------------+
  * | Copyright (c) 1997-2008 The PHP Group                                |
@@ -140,7 +141,7 @@ class File_IMC
         if (strpos($className, 'File_IMC') === false) {
             return false;
 		}
-        return include str_replace('_', '/', $className) . '.php';
+        return include str_replace(array('File_', '_'), array('', '/'), $className) . '.php';
     }
 
     /**
